@@ -1,0 +1,73 @@
+
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  tags:
+    include:
+    - v*
+
+# Note: github_pat should be configured as an environment variable in devops
+#   -> create github pat here: https://github.com/settings/tokens
+#   -> Create environment variable in dev.azure.com under pipelines -> edit (right top) -> variables (right top triple dots) -> called github_pat -> click the lock
+variables:
+  gh_user: micheletolve
+  gh_repo: micheletolve.github.io
+  gh_pass: $(github_pat)
+  gh_email: michele.tolve@gmail.com
+  gh_auth_header: $(echo -n "${gh_user}:$(github_pat)" | base64);
+  
+pool:
+  vmImage: 'ubuntu-latest'
+
+
+steps:
+
+- task: UseNode@1
+  inputs:
+    checkLatest: true
+    
+- script: |
+    npm install -g gitbook-cli
+  displayName: '[Npm] npm install and build'
+
+- script: |
+    gitbook install
+  displayName: '[Gitbook] gitbook install'
+
+- script: |
+    gitbook build
+  displayName: '[Gitbook] gitbook build'
+
+  
+- script: git clone https://$(github_pat)@github.com/$(gh_user)/$(gh_repo).git .
+  workingDirectory: $(Build.StagingDirectory)
+  displayName: "[Git] Clone GitHub Pages Repository"
+
+- script: |
+    git config user.email $(gh_email)
+    git config user.name $(gh_user)
+  workingDirectory: $(Build.StagingDirectory)
+  displayName: '[Git] Configure User'
+
+- script: 'git checkout master'
+  workingDirectory: $(Build.StagingDirectory)
+  displayName: '[Git] Set master branch'
+    
+- script: |
+    cp -R $(Build.StagingDirectory)/.git $(Pipeline.Workspace)/s/_book;
+    rm -rf $(Build.StagingDirectory)/*;
+    cp -R $(Pipeline.Workspace)/s/_book/* $(Build.StagingDirectory);
+  displayName: '[Script] Remove all files in $(Build.StagingDirectory) except .git/ and add files from /tmp/build'
+
+- script: |
+    git add --all;
+    git commit -m"Pipelines-Bot: Updated site via $(Build.SourceVersion)";
+  workingDirectory: $(Build.StagingDirectory)
+  displayName: '[Git] Creating commit'
+
+- script: |
+    git push origin master;
+  workingDirectory: $(Build.StagingDirectory)
+  displayName: '[Git] Push changes to remote'

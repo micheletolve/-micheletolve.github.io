@@ -1,0 +1,937 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Logstash · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bootstrap-grid/bootstrap-grid.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="logstash.html" />
+    
+    
+    <link rel="prev" href="filebeat.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Angular MST Ippica</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../angular/intro.html">
+            
+                <a href="../angular/intro.html">
+            
+                    
+                    Intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../angular/trick.html">
+            
+                <a href="../angular/trick.html">
+            
+                    
+                    Trick
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ELK</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="intro.html">
+            
+                <a href="intro.html">
+            
+                    
+                    Intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="filebeat.html">
+            
+                <a href="filebeat.html">
+            
+                    
+                    Filebeat
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="filebeat.html">
+            
+                <a href="filebeat.html#config">
+            
+                    
+                    Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="filebeat.html">
+            
+                <a href="filebeat.html#run">
+            
+                    
+                    Run
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="logstash.html">
+            
+                <a href="logstash.html">
+            
+                    
+                    Logstash
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="logstash.html">
+            
+                <a href="logstash.html#config">
+            
+                    
+                    Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="logstash.html">
+            
+                <a href="logstash.html#run">
+            
+                    
+                    Run
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="elastic.html">
+            
+                <a href="elastic.html">
+            
+                    
+                    Elasticsearch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="elastic.html">
+            
+                <a href="elastic.html#config">
+            
+                    
+                    Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="elastic.html">
+            
+                <a href="elastic.html#run">
+            
+                    
+                    Run
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="kibana.html">
+            
+                <a href="kibana.html">
+            
+                    
+                    Kibana
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="kibana.html">
+            
+                <a href="kibana.html#config">
+            
+                    
+                    Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="kibana.html">
+            
+                <a href="kibana.html#run">
+            
+                    
+                    Run
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="webjobbeat.html">
+            
+                <a href="webjobbeat.html">
+            
+                    
+                    Webjob Beat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="elasticindex.html">
+            
+                <a href="elasticindex.html">
+            
+                    
+                    Indici elastic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="lificycle.html">
+            
+                <a href="lificycle.html">
+            
+                    
+                    Lificycle indici
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="slack.html">
+            
+                <a href="slack.html">
+            
+                    
+                    Slack alert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="logsearch.html">
+            
+                <a href="logsearch.html">
+            
+                    
+                    Consultazione Log
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Nuget</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../nuget/setup.html">
+            
+                <a href="../nuget/setup.html">
+            
+                    
+                    SetUp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../nuget/setup.html">
+            
+                <a href="../nuget/setup.html#installazione">
+            
+                    
+                    Installazione
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../nuget/setup.html">
+            
+                <a href="../nuget/setup.html#aggiungere-origine-pacchetti">
+            
+                    
+                    Aggiungere origine
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../nuget/package.html">
+            
+                <a href="../nuget/package.html">
+            
+                    
+                    Package
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../nuget/package.html">
+            
+                <a href="../nuget/package.html#nuspec">
+            
+                    
+                    Nuspec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../nuget/package.html">
+            
+                <a href="../nuget/package.html#creazione-pacchetto-nuget">
+            
+                    
+                    Creazione pacchetto nuget
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../nuget/package.html">
+            
+                <a href="../nuget/package.html#pubblicazione-pacchetto-nuget">
+            
+                    
+                    Pubblicazione pacchetto nuget
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Azure</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../azure/azurefunction.html">
+            
+                <a href="../azure/azurefunction.html#azure-function">
+            
+                    
+                    Azure Function
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../azure/azurefunction.html">
+            
+                <a href="../azure/azurefunction.html#introduzione">
+            
+                    
+                    Introduzione
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../azure/azurefunction.html">
+            
+                <a href="../azure/azurefunction.html#sviluppo">
+            
+                    
+                    Hello World
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.2.1" data-path="../azure/azurefunction.html">
+            
+                <a href="../azure/azurefunction.html#creazione-del-progetto">
+            
+                    
+                    Creazione del progetto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2.2" data-path="../azure/azurefunction.html">
+            
+                <a href="../azure/azurefunction.html#esecuzione-in-locale">
+            
+                    
+                    Esecuzione in locale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2.3" data-path="../azure/azurefunction.html">
+            
+                <a href="../azure/azurefunction.html#pubblicazione-in-azure">
+            
+                    
+                    Pubblicazione
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2.4" data-path="../azure/azurefunction.html">
+            
+                <a href="../azure/azurefunction.html#conclusioni">
+            
+                    
+                    Conclusioni
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Git</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../git/git.html">
+            
+                <a href="../git/git.html#configurazione-globale-di-git">
+            
+                    
+                    Global Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../git/git.html">
+            
+                <a href="../git/git.html#generazione-delle-chiavi-ssh">
+            
+                    
+                    Connect with ssh key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../git/git.html">
+            
+                <a href="../git/git.html#git-flow">
+            
+                    
+                    Git Flow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../git/git.html">
+            
+                <a href="../git/git.html#main-branches">
+            
+                    
+                    Main branches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../git/git.html">
+            
+                <a href="../git/git.html#feature-branch">
+            
+                    
+                    Feature
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.3" data-path="../git/git.html">
+            
+                <a href="../git/git.html#release-branch">
+            
+                    
+                    Release
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.4" data-path="../git/git.html">
+            
+                <a href="../git/git.html#hotfix-branch">
+            
+                    
+                    Hotfix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.5" data-path="../git/git.html">
+            
+                <a href="../git/git.html#versionamento-semantico">
+            
+                    
+                    Versionamento
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Logstash</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="logstash">Logstash</h1>
+<p>Pipeline con la funzione di raccogliere dati da diverse fonti e mandarle ad elasticsearch.</p>
+<h4 id="config">Config</h4>
+<p>Scaricare logstash all&apos;indirizzo <a href="https://www.elastic.co/downloads/logstash" target="_blank">https://www.elastic.co/downloads/logstash</a></p>
+<p>Preparare il file logstash.conf per seguire la pipeline
+Beats -&gt; Logstash -&gt; Elasticsearch.</p>
+<p>Come input mi metto in ascolto sulla porta 5044 per ricevere da filebeats.</p>
+<pre><code>input {
+  beats {
+    port =&gt; 5044
+  }
+}
+</code></pre><p>Tramite grok &#xE8; possibile ricavare la struttura di dati non strutturati e modificare i dati on the fly.
+Nel nostro caso suddividiamo riga per riga con il pattern descritto nello snippet seguente.
+Inoltra ignoriamo i messaggi che sono pi&#xF9; vecchi di un certo numero di giorni (poich&#xE8; una volta arrivati ad elastic i messaggi vengono smistati nei vari indici in base alla data, se dovesse arrivare un messaggio troppo vecchio potrebbe provare a scrivere in un indice che ormai &#xE8; in sola lettura o eliminato, causando il blocco di tutta la pipeline)</p>
+<pre><code>filter {
+  grok {
+    match =&gt; { &quot;message&quot; =&gt; &quot;%{LOGLEVEL:level} %{NOTSPACE:app} %{NOTSPACE:logger} %{NOTSPACE:class} %{NOTSPACE:method} %{NUMBER:row} %{TIMESTAMP_ISO8601:timestamp} %{NUMBER:thread} (?&lt;message&gt;(.|\r|\n)*)&quot; }
+    overwrite =&gt; [ &quot;message&quot; ]
+      }
+  date {
+    match =&gt; [&quot;timestamp&quot;, &quot;ISO8601&quot;]
+  }
+  ruby {
+    init =&gt; &quot;require &apos;time&apos;&quot;
+    code =&gt; &apos;if LogStash::Timestamp.new(event.get(&quot;@timestamp&quot;)+172800) &lt; ( LogStash::Timestamp.now)
+              event.cancel
+            end&apos;
+  }
+  mutate {
+    remove_field =&gt; [
+                &quot;[timestamp]&quot;,
+                &quot;[beat]&quot;,
+                &quot;[log]&quot;,
+                    &quot;[prospector]&quot;,
+                    &quot;[source]&quot;,
+                    &quot;[host]&quot;,
+                &quot;[tags]&quot;
+            ]
+    }
+}
+</code></pre><p>In output mando ad elasticsearch costruendo un indice giornaliero eventualmente inserendo user e password</p>
+<pre><code>output {
+  elasticsearch {
+    hosts =&gt; [&quot;http://localhost:9200&quot;]
+    index =&gt; &quot;%{[@metadata][beat]}-%{[@metadata][version]}-%{+YYYY.MM.dd}&quot;
+    #user =&gt; &quot;elastic&quot;
+    #password =&gt; &quot;changeme&quot;
+  }
+}
+</code></pre><h4 id="run">Run</h4>
+<p>Eseguire il comando</p>
+<pre><code>bin/logstash -f logstash.conf
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="filebeat.html#run" class="navigation navigation-prev " aria-label="Previous page: Run">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="logstash.html#config" class="navigation navigation-next " aria-label="Next page: Config">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Logstash","level":"3.3","depth":1,"next":{"title":"Config","level":"3.3.1","depth":2,"anchor":"#config","path":"elk/logstash.md","ref":"elk/logstash.md#config","articles":[]},"previous":{"title":"Run","level":"3.2.2","depth":2,"anchor":"#run","path":"elk/filebeat.md","ref":"elk/filebeat.md#run","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","flexible-alerts","bootstrap-grid"],"pluginsConfig":{"bootstrap-grid":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"elk/logstash.md","mtime":"2020-08-24T11:05:26.818Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-24T11:06:29.226Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
